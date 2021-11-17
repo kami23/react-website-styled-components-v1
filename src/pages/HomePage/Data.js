@@ -4,15 +4,16 @@ export const homeObjOne = {
   lightTopLine: true,
   lightText: true,
   lightTextDesc: true,
-  topLine: 'Marketing Agency',
-  headline: 'Lead Generation Specialist for Online Businesses',
+  topLine: "Marketing Agency",
+  headline: "Lead Generation Specialist for Online Businesses",
   description:
-    'We help business owners increase their revenue. Our team of unique specialist can help you achieve your business goals.',
-  buttonLabel: 'Get Started',
-  imgStart: '',
-  img: require('../../images/svg-1.svg'),
-  alt: 'Credit Card',
-  start: ''
+    "We help business owners increase their revenue. Our team of unique specialist can help you achieve your business goals.",
+  buttonLabel: "Get Started",
+  imgStart: "",
+  button: false,
+  img: require("../../images/HomePage.png"),
+  alt: "Credit Card",
+  start: false,
 };
 
 export const homeObjTwo = {
@@ -21,15 +22,16 @@ export const homeObjTwo = {
   lightTopLine: true,
   lightText: true,
   lightTextDesc: true,
-  topLine: 'Instant Setup',
-  headline: 'Extremely quick onboarding process',
+  topLine: "Instant Setup",
+  headline: "Extremely quick onboarding process",
   description:
     "Once you've joined, our team of specialist will reach out to you and get you set up in minutes.",
-  buttonLabel: 'Learn More',
-  imgStart: '',
-  img: require('../../images/svg-2.svg'),
-  alt: 'Vault',
-  start: ''
+  buttonLabel: "Learn More",
+  imgStart: "",
+  img: require("../../images/svg-2.svg"),
+  backgroundimage: require("../../images/background.jpg"),
+  alt: "Vault",
+  start: "",
 };
 
 export const homeObjThree = {
@@ -38,16 +40,16 @@ export const homeObjThree = {
   lightTopLine: false,
   lightText: false,
   lightTextDesc: false,
-  topLine: 'Sarah Jeni',
+  topLine: "Sarah Jeni",
   headline:
-    'Ultra helped me increase my revenue by over 3X in less than 3 months!',
+    "Ultra helped me increase my revenue by over 3X in less than 3 months!",
   description:
     "Their team is wonderful! I can't believe I didn't start working with them earlier.",
-  buttonLabel: 'View Case Study',
-  imgStart: 'start',
-  img: require('../../images/profile.jpg'),
-  alt: 'Vault',
-  start: 'true'
+  buttonLabel: "View Case Study",
+  imgStart: "start",
+  img: require("../../images/profile.jpg"),
+  alt: "Vault",
+  start: "true",
 };
 
 export const homeObjFour = {
@@ -56,13 +58,13 @@ export const homeObjFour = {
   lightTopLine: true,
   lightText: true,
   lightTextDesc: true,
-  topLine: 'Secure Database',
-  headline: 'All your data is stored on our secure server',
+  topLine: "Secure Database",
+  headline: "All your data is stored on our secure server",
   description:
-    'You will never have to worry about your information getting leaked. Our team of security experts will ensure your records are kept safe.',
-  buttonLabel: 'Sign Up Now',
-  imgStart: 'start',
-  img: require('../../images/svg-3.svg'),
-  alt: 'Vault',
-  start: 'true'
+    "You will never have to worry about your information getting leaked. Our team of security experts will ensure your records are kept safe.",
+  buttonLabel: "Sign Up Now",
+  imgStart: "start",
+  img: require("../../images/svg-3.svg"),
+  alt: "Vault",
+  start: "true",
 };

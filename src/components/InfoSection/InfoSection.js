@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Container, Button } from '../../globalStyles';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Container, Button } from "../../globalStyles";
 import {
   InfoSec,
   InfoRow,
@@ -10,8 +10,8 @@ import {
   Heading,
   Subtitle,
   ImgWrapper,
-  Img
-} from './InfoSection.elements';
+  Img,
+} from "./InfoSection.elements";
 
 function InfoSection({
   primary,
@@ -26,7 +26,8 @@ function InfoSection({
   img,
   alt,
   imgStart,
-  start
+  start,
+  button,
 }) {
   return (
     <>
@@ -38,11 +39,15 @@ function InfoSection({
                 <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
-                <Link to='/sign-up'>
-                  <Button big fontBig primary={primary}>
-                    {buttonLabel}
-                  </Button>
-                </Link>
+                {button ? (
+                  <Link to="/sign-up">
+                    <Button big fontBig primary={primary}>
+                      {buttonLabel}
+                    </Button>
+                  </Link>
+                ) : (
+                  <div></div>
+                )}
               </TextWrapper>
             </InfoColumn>
             <InfoColumn>

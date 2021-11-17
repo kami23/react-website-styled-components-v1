@@ -1,0 +1,183 @@
+webpackHotUpdate("main",{
+
+/***/ "./src/components/Navbar/Navbar.elements.js":
+/*!**************************************************!*\
+  !*** ./src/components/Navbar/Navbar.elements.js ***!
+  \**************************************************/
+/*! exports provided: Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavItemBtn, NavLinks, NavBtnLink, SocialMedia, SocialMediaWrap, SocialIcons, SocialIconLink */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Nav", function() { return Nav; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavbarContainer", function() { return NavbarContainer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavLogo", function() { return NavLogo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MobileIcon", function() { return MobileIcon; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavMenu", function() { return NavMenu; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavItem", function() { return NavItem; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavItemBtn", function() { return NavItemBtn; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavLinks", function() { return NavLinks; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavBtnLink", function() { return NavBtnLink; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SocialMedia", function() { return SocialMedia; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SocialMediaWrap", function() { return SocialMediaWrap; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SocialIcons", function() { return SocialIcons; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SocialIconLink", function() { return SocialIconLink; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-icons/fa */ "./node_modules/react-icons/fa/index.esm.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _globalStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../globalStyles */ "./src/globalStyles.js");
+
+
+
+
+const Nav = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].nav`
+  background: transparent;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+`;
+const NavbarContainer = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_globalStyles__WEBPACK_IMPORTED_MODULE_3__["Container"])`
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+
+  ${_globalStyles__WEBPACK_IMPORTED_MODULE_3__["Container"]}
+`;
+const NavLogo = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"])`
+  color: black;
+  justify-self: flex-start;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  margin-right: 5rem;
+  margin-left: 0.5rem;
+`;
+const MobileIcon = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div`
+  display: none;
+
+  @media screen and (max-width: 960px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+`;
+const NavMenu = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].ul`
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+
+  @media screen and (max-width: 960px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    left: ${({
+  click
+}) => click ? 0 : '-100%'};
+    opacity: 1;
+    transition: all 0.5s ease;
+    background: #101522;
+  }
+`;
+const NavItem = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].li`
+  height: 80px;
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    border-bottom: 2px solid #4b59f7;
+  }
+
+  @media screen and (max-width: 960px) {
+    width: 100%;
+
+    &:hover {
+      border: none;
+    }
+  }
+`;
+const NavItemBtn = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].li`
+  @media screen and (max-width: 960px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+  }
+`;
+const NavLinks = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"])`
+  color: black;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+
+  @media screen and (max-width: 960px) {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+
+    &:hover {
+      color: #4b59f7;
+      transition: all 0.3s ease;
+    }
+  }
+`;
+const NavBtnLink = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"])`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 8px 16px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+`;
+const SocialMedia = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section`
+  max-width: 1000px;
+  width: 100%;
+`;
+const SocialMediaWrap = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1000px;
+  margin-top: 30px;
+
+  @media screen and (max-width: 820px) {
+    flex-direction: column;
+  }
+`;
+const SocialIcons = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div`
+  display: flex;
+  align-items: center;
+  width: 240px;
+  margin-left: 20rem;
+`;
+const SocialIconLink = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].a`
+  color: black;
+  font-size: 24px;
+  marging-left:1rem;
+`;
+
+/***/ })
+
+})
+//# sourceMappingURL=main.c4454bdad1f38247d3bb.hot-update.js.map

@@ -1,5 +1,4 @@
 import React from "react";
-import { FaSmile } from "react-icons/fa";
 import { InfoSection } from "../../components";
 export const VisionObjet = {
   primary: true,

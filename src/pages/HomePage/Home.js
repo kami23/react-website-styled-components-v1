@@ -1,6 +1,5 @@
 import React from "react";
-import { homeObjOne, homeObjTwo, homeObjThree, homeObjFour } from "./Data";
-import { InfoSection, Pricing } from "../../components";
+import { homeObjOne } from "./Data";
 import InfoSectionRight from "../../components/InfoSectionRight/InfoSectionRight";
 import Bio from "../Bio/Bio";
 function Home() {

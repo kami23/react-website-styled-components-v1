@@ -1,68 +1,24 @@
 import React, { useState, useEffect } from "react";
-import {
-  FaBars,
-  FaTimes,
-  FaFacebook,
-  FaTwitter,
-  FaLinkedin,
-} from "react-icons/fa";
+import { FaBars, FaTimes, FaFacebook, FaLinkedin } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
-import styled from "styled-components";
 import i18n from "i18next";
 import { useTranslation } from "react-i18next";
-
 import {
   Nav,
   NavbarContainer,
   NavLogo,
-  NavIcon,
   MobileIcon,
   NavMenu,
   NavItem,
   NavItemBtn,
   NavLinks,
-  NavBtnLink,
   SocialMedia,
   SocialMediaWrap,
-  SocialLogo,
-  SocialIcon,
-  WebsiteRights,
   SocialIcons,
   SocialIconLink,
   NameSite,
   Button,
 } from "./Navbar.elements";
-
-const StyledLi = styled.li`
-  float: left;
-`;
-
-const Dropbtn = styled.div`
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-`;
-
-const DropDownContent = styled.div`
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-`;
-
-const DropDownLi = styled(StyledLi)`
-  display: inline-block;
-  &:hover {
-    background-color: red;
-  }
-  &:hover ${DropDownContent} {
-    display: block;
-  }
-`;
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -156,9 +112,6 @@ function Navbar() {
                   >
                     <FaFacebook />
                   </SocialIconLink>
-                  <SocialIconLink href="/" target="_blank" aria-label="Twitter">
-                    <FaTwitter />
-                  </SocialIconLink>
                   <SocialIconLink
                     href="https://www.linkedin.com/in/issamnechma/?originalSubdomain=dz"
                     target="_blank"
@@ -170,7 +123,7 @@ function Navbar() {
               </SocialMediaWrap>
             </SocialMedia>
             <NavItemBtn>
-              {selectedLang == "ar" ? (
+              {selectedLang === "ar" && button ? (
                 <Button fontBig={true} onClick={() => changeLanguage("en")}>
                   English
                 </Button>

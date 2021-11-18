@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import img from "../../images/background.jpg";
 
 export const InfoSec = styled.div`
   color: #fff;

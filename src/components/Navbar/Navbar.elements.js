@@ -18,11 +18,10 @@ export const Nav = styled.nav`
   }
 `;
 
-export const NavbarContainer = styled(Container)`
+export const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
   height: 80px;
-  ${Container}
 `;
 
 export const NavLogo = styled(Link)`
@@ -33,7 +32,6 @@ export const NavLogo = styled(Link)`
   font-size: 2rem;
   display: flex;
   align-items: center;
-  margin-left: 0.5rem;
   @media screen and (max-width: 960px) {
     display: block;
     position: absolute;
@@ -44,14 +42,12 @@ export const NavLogo = styled(Link)`
 
 export const NameSite = styled.span`
   font-size: 2rem;
-  margin-left: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   justify-self: flex-start;
   cursor: pointer;
   font-weight: bolder;
-  margin-left: 0.5rem;
   width: 400px;
 `;
 
@@ -75,8 +71,8 @@ export const NavMenu = styled.ul`
   align-items: center;
   list-style: none;
   text-align: center;
-  padding-left: 5rem;
-  font-size: 26px;
+  font-weight: bold;
+  font-size: 18px;
   @media screen and (max-width: 960px) {
     display: flex;
     flex-direction: column;
@@ -88,7 +84,7 @@ export const NavMenu = styled.ul`
     opacity: 1;
     transition: all 0.5s ease;
     background: white;
-    font-size: 18px;
+    font-size: 16px;
   }
 `;
 

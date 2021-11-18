@@ -2,15 +2,11 @@ import styled from "styled-components";
 export const MainContainer = styled.div`
   z-index: 1;
   width: 100%;
-  max-width: 1700px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 50px;
-  padding-left: 50px;
+  max-width: 1500px;
+  padding: 0;
 
   @media screen and (max-width: 991px) {
-    padding-right: 30px;
-    padding-left: 30px;
+    padding: 0;
   }
 `;
 export const InfoSec = styled.div`
@@ -31,8 +27,7 @@ export const InfoRow = styled.div`
 
 export const InfoColumn = styled.div`
   margin-bottom: 15px;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding: 0;
   flex: 1;
   max-width: 50%;
   flex-basis: 50%;
@@ -63,6 +58,7 @@ export const TextWrapper = styled.div`
 
 export const ImgWrapper = styled.div`
   max-width: 1055px;
+  width: 100%;
   display: flex;
   justify-content: ${({ start }) => (start ? "flex-start" : "flex-end")};
   @media screen and (max-width: 920px) {

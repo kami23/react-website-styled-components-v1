@@ -2,12 +2,12 @@ import React from "react";
 import { homeObjOne, homeObjTwo, homeObjThree, homeObjFour } from "./Data";
 import { InfoSection, Pricing } from "../../components";
 import InfoSectionRight from "../../components/InfoSectionRight/InfoSectionRight";
-import Biography from "../Biography/Biography";
+import Bio from "../Bio/Bio";
 function Home() {
   return (
     <>
       <InfoSectionRight {...homeObjOne} />
-      <Biography />
+      <Bio />
       {/*   <InfoSection {...homeObjThree} />
       <InfoSection {...homeObjTwo} />
       <Pricing />

@@ -8,9 +8,11 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import { Navbar, Footer } from "./components";
 import styled from "styled-components";
-import img from "./images/background.jpg";
 import Vision from "./pages/VisionPage/Vision";
+import Bio from "./pages/Bio/Bio";
+
 const MainContainer = styled.div``;
+
 function App() {
   return (
     <Router>
@@ -20,6 +22,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route path="/" exact component={Home} />
+          <Route path="/biography" exact component={Bio} />
           <Route path="/vision" exact component={Vision} />
           <Route path="/services" component={Services} />
           <Route path="/products" component={Products} />

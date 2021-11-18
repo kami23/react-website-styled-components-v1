@@ -61,21 +61,6 @@ function Navbar() {
               {click ? <FaTimes /> : <FaBars />}
             </MobileIcon>
             <NavMenu onClick={handleClick} click={click}>
-              {!button ? (
-                <>
-                  {selectedLang === "ar" ? (
-                    <Button onClick={() => changeLanguage("en")}>
-                      English
-                    </Button>
-                  ) : (
-                    <Button onClick={() => changeLanguage("en")}>
-                      العربية
-                    </Button>
-                  )}
-                </>
-              ) : (
-                <></>
-              )}
               <NavItem>
                 <NavLinks to="/" onClick={closeMobileMenu}>
                   {t("Home")}
@@ -132,15 +117,7 @@ function Navbar() {
                   )}
                 </>
               ) : (
-                <>
-                  {selectedLang === "ar" ? (
-                    <Button fontBig={true} onClick={() => changeLanguage("en")}>
-                      En
-                    </Button>
-                  ) : (
-                    <Button onClick={() => changeLanguage("ar")}>Ar</Button>
-                  )}
-                </>
+                <></>
               )}
             </NavItemBtn>
             <SocialMedia>
@@ -159,6 +136,20 @@ function Navbar() {
                     aria-label="LinkedIn"
                   >
                     <FaLinkedin />
+                  </SocialIconLink>
+                  <SocialIconLink>
+                    <NavItemBtn>
+                      {selectedLang === "ar" ? (
+                        <Button
+                          fontBig={true}
+                          onClick={() => changeLanguage("en")}
+                        >
+                          En
+                        </Button>
+                      ) : (
+                        <Button onClick={() => changeLanguage("ar")}>Ar</Button>
+                      )}
+                    </NavItemBtn>
                   </SocialIconLink>
                 </SocialIcons>
               </SocialMediaWrap>

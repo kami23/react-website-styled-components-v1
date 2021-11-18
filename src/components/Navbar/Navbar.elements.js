@@ -200,10 +200,12 @@ export const Button = styled.button`
 
   @media screen and (max-width: 960px) {
     width: 100%;
-    padding: 8px;
+    padding: 0px 4px;
     font-size: 24px;
     font-weight: bold;
-    border-radius: 20px;
+    border-radius: 10px;
+    color: #fff;
+    background: #082c64;
   }
 `;
 
@@ -215,9 +217,9 @@ export const NavItemBtn = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
-    top: 30px;
-    left: 10px;
+    height: 20px;
+    top: 50px;
+    left: 120px;
     position: absolute;
   }
 `;

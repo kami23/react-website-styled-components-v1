@@ -46,7 +46,7 @@ function InfoSectionRight({
 
             <InfoColumn>
               <TextWrapper>
-                <Heading lightText={lightText}>{t("Slogan")}</Heading>
+                <Heading lightText={lightText}>{t("Trust the future")}</Heading>
                 <Subtitle>{description01}</Subtitle>
                 <Subtitle>{description02}</Subtitle>
                 <Subtitle>{description03}</Subtitle>

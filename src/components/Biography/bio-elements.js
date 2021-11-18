@@ -40,7 +40,7 @@ export const TextWrapper = styled.div`
 `;
 
 export const ImgWrapper = styled.div`
-  max-width: 1055px;
+  max-width: 1255px;
   display: flex;
   justify-content: ${({ start }) => (start ? "flex-start" : "flex-end")};
 `;

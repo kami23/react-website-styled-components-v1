@@ -22,10 +22,10 @@ const resources = {
       Biography: "السيرة الذاتية",
       Vision: "الرؤية",
       Values: "القيم",
-      Intervision: "التدخلات",
+      "Fields of intervention": "مجالات التدخل",
       Activities: "الأنشطة",
       "Issam NECHMA": "نشمة عصام",
-      Slogan: "شعار",
+      "Trust the future": "الثقة في المستقبل",
 
       "Born on the 25 of august 1986, Issam NECHMA took his baccalaureate in experimental sciences with a good mention in 2003 and went on to peruse his studies in United Kingdom starting his educational journey with and English diploma from king’s college of London which he obtained in 2004 where he was a member of University of London Union where he worked as a student representative for two years.":
         "نشمة عصام، مدير عام لمجمع صناعي ورئيس نادي الترجي الرياضي الحجار، متحصل على شهادة ليسانس في الرياضيات المالية وعلى ماجيستير هندسة طيران، عضو في معهد أيماك (IMechE) الانجليزي ومهندس ميكانيكي معترف به من طرف المعهد منذ 2007. ولد في 1986 بولاية عنابة أين زاول دراسته حتى المرحلة الثانوية، تحصل على شهادة البكالوريوس سنة 2003 شعبة علوم تجريبية.",

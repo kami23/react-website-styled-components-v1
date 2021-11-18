@@ -3,13 +3,10 @@ import {
   FaBars,
   FaTimes,
   FaFacebook,
-  FaInstagram,
-  FaYoutube,
   FaTwitter,
   FaLinkedin,
 } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
-import { Button } from "../../globalStyles";
 import styled from "styled-components";
 import i18n from "i18next";
 import { useTranslation } from "react-i18next";
@@ -33,6 +30,7 @@ import {
   SocialIcons,
   SocialIconLink,
   NameSite,
+  Button,
 } from "./Navbar.elements";
 
 const StyledLi = styled.li`
@@ -91,7 +89,7 @@ function Navbar() {
   const changeLanguage = (lang) => {
     setSelectedLang(lang);
     i18n.changeLanguage(lang);
-    i18n.dir();
+    document.body.dir = i18n.dir();
   };
 
   return (
@@ -133,10 +131,10 @@ function Navbar() {
               </NavItem>
               <NavItem>
                 <NavLinks to="/products" onClick={closeMobileMenu}>
-                  {t("Intervision")}
+                  {t("Fields of intervention")}
                 </NavLinks>
               </NavItem>
-              {/*    <DropDownLi>
+              {/*<DropDownLi>
                 <Dropbtn onClick={() => this.handleClick("DropDown")}>
                   DropDown
                 </Dropbtn>
@@ -173,9 +171,11 @@ function Navbar() {
             </SocialMedia>
             <NavItemBtn>
               {selectedLang == "ar" ? (
-                <Button onClick={() => changeLanguage("en")}>English</Button>
+                <Button fontBig={true} onClick={() => changeLanguage("en")}>
+                  English
+                </Button>
               ) : (
-                <Button onClick={() => changeLanguage("ar")}>Arabic</Button>
+                <Button onClick={() => changeLanguage("ar")}>العربية</Button>
               )}
             </NavItemBtn>
           </NavbarContainer>

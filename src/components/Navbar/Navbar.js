@@ -69,6 +69,7 @@ const DropDownLi = styled(StyledLi)`
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
+  const [selectedLang, setSelectedLang] = useState("en");
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -88,9 +89,11 @@ function Navbar() {
   window.addEventListener("resize", showButton);
   const { t } = useTranslation();
   const changeLanguage = (lang) => {
+    setSelectedLang(lang);
     i18n.changeLanguage(lang);
     i18n.dir();
   };
+
   return (
     <>
       <IconContext.Provider value={{ color: "#082c64" }}>
@@ -133,7 +136,7 @@ function Navbar() {
                   {t("Intervision")}
                 </NavLinks>
               </NavItem>
-              <DropDownLi>
+              {/*    <DropDownLi>
                 <Dropbtn onClick={() => this.handleClick("DropDown")}>
                   DropDown
                 </Dropbtn>
@@ -143,7 +146,7 @@ function Navbar() {
                   <NavLinks>Link 2</NavLinks>
                   <NavLinks>Link 3</NavLinks>
                 </DropDownContent>
-              </DropDownLi>
+          </DropDownLi>*/}
             </NavMenu>
             <SocialMedia>
               <SocialMediaWrap>
@@ -168,19 +171,11 @@ function Navbar() {
                 </SocialIcons>
               </SocialMediaWrap>
             </SocialMedia>
-
             <NavItemBtn>
-              {button ? (
-                <>
-                  <Button onClick={() => changeLanguage("en")}>English</Button>
-                  <Button onClick={() => changeLanguage("ar")}>Arabic</Button>
-                </>
+              {selectedLang == "ar" ? (
+                <Button onClick={() => changeLanguage("en")}>English</Button>
               ) : (
-                <NavBtnLink to="/sign-up">
-                  <Button onClick={closeMobileMenu} fontBig primary>
-                    SIGN UP
-                  </Button>
-                </NavBtnLink>
+                <Button onClick={() => changeLanguage("ar")}>Arabic</Button>
               )}
             </NavItemBtn>
           </NavbarContainer>

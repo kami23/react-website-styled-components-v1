@@ -11,8 +11,6 @@ import styled from "styled-components";
 import img from "./images/background.jpg";
 import Biography from "./pages/Biography/Biography1";
 import Vision from "./pages/VisionPage/Vision";
-import Header from "./components/Header/Header";
-import Main from "./components/Main/Main";
 const MainContainer = styled.div``;
 function App() {
   return (
@@ -20,8 +18,6 @@ function App() {
       <GlobalStyle />
       <ScrollToTop />
       <MainContainer>
-        <Header />
-        <Main />
         <Navbar />
         <Switch>
           <Route path="/" exact component={Home} />

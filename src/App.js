@@ -9,8 +9,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import { Navbar, Footer } from "./components";
 import styled from "styled-components";
 import img from "./images/background.jpg";
-import Biography from "./pages/Biography/Biography1";
 import Vision from "./pages/VisionPage/Vision";
+import Biography from "./pages/Biography/Biography1";
 const MainContainer = styled.div``;
 function App() {
   return (

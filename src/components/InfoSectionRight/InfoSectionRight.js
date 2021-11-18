@@ -41,7 +41,6 @@ function InfoSectionRight({
                 <Img src={img} alt={alt} />
               </ImgWrapper>
             </InfoColumn>
-
             <InfoColumn>
               <TextWrapper>
                 <Heading lightText={lightText}>{t("Trust the future")}</Heading>

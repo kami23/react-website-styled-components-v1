@@ -139,15 +139,24 @@ function Navbar() {
                   </SocialIconLink>
                   <SocialIconLink>
                     <NavItemBtn>
-                      {selectedLang === "ar" ? (
-                        <Button
-                          fontBig={true}
-                          onClick={() => changeLanguage("en")}
-                        >
-                          En
-                        </Button>
+                      {!button ? (
+                        <>
+                          {" "}
+                          {selectedLang === "ar" ? (
+                            <Button
+                              fontBig={true}
+                              onClick={() => changeLanguage("en")}
+                            >
+                              En
+                            </Button>
+                          ) : (
+                            <Button onClick={() => changeLanguage("ar")}>
+                              Ar
+                            </Button>
+                          )}
+                        </>
                       ) : (
-                        <Button onClick={() => changeLanguage("ar")}>Ar</Button>
+                        <></>
                       )}
                     </NavItemBtn>
                   </SocialIconLink>

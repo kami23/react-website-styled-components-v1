@@ -55,6 +55,10 @@ export const ImgWrapper = styled.div`
   max-width: 1055px;
   display: flex;
   justify-content: ${({ start }) => (start ? "flex-start" : "flex-end")};
+  @media screen and (max-width: 920px) {
+    max-width: 655px;
+    height: 355px;
+  }
 `;
 
 export const TopLine = styled.div`
@@ -84,6 +88,11 @@ export const Heading = styled.h1`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 920px) {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
 `;
 
 export const Subtitle = styled.p`
@@ -92,10 +101,4 @@ export const Subtitle = styled.p`
   font-size: 18px;
   line-height: 24px;
   color: ${({ lightTextDesc }) => (lightTextDesc ? "#a9b3c1" : "#1c2237")};
-
-  @media screen and (max-width: 920px) {
-    justify-content: center;
-    display: flex;
-    align-items: center;
-  }
 `;

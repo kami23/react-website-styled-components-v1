@@ -1,13 +1,7 @@
 import React from "react";
-import { Button } from "../../globalStyles";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import {
   FooterContainer,
-  FooterSubscription,
-  FooterSubText,
-  FooterSubHeading,
-  Form,
-  FormInput,
   SocialMedia,
   SocialMediaWrap,
   SocialIcons,
@@ -17,7 +11,7 @@ import {
 function Footer() {
   return (
     <FooterContainer>
-      <FooterSubscription>
+      {/*    <FooterSubscription>
         <FooterSubHeading>
           Join our exclusive membership to receive the latest news and trends
         </FooterSubHeading>
@@ -27,7 +21,7 @@ function Footer() {
           <Button fontBig>Subscribe</Button>
         </Form>
       </FooterSubscription>
-
+*/}
       <SocialMedia>
         <SocialMediaWrap>
           <SocialIcons>

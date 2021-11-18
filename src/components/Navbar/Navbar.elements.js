@@ -12,20 +12,12 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 999;
+
+  @media screen and (max-width: 960px) {
+    height: 90px;
+  }
 `;
 
-export const NameSite = styled.span`
-  font-size: 2rem;
-  margin-left: 0.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-self: flex-start;
-  cursor: pointer;
-  font-weight: bolder;
-  margin-left: 0.5rem;
-  width: 400px;
-`;
 export const NavbarContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
@@ -45,9 +37,22 @@ export const NavLogo = styled(Link)`
   @media screen and (max-width: 960px) {
     display: block;
     position: absolute;
-    top: 0;
+    top: 5px;
     right: 0;
   }
+`;
+
+export const NameSite = styled.span`
+  font-size: 2rem;
+  margin-left: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: flex-start;
+  cursor: pointer;
+  font-weight: bolder;
+  margin-left: 0.5rem;
+  width: 400px;
 `;
 
 export const MobileIcon = styled.div`
@@ -71,6 +76,7 @@ export const NavMenu = styled.ul`
   list-style: none;
   text-align: center;
   padding-left: 5rem;
+  font-size: 26px;
   @media screen and (max-width: 960px) {
     display: flex;
     flex-direction: column;
@@ -81,7 +87,8 @@ export const NavMenu = styled.ul`
     left: ${({ click }) => (click ? 0 : "-100%")};
     opacity: 1;
     transition: all 0.5s ease;
-    background: #101522;
+    background: white;
+    font-size: 28px;
   }
 `;
 
@@ -99,18 +106,6 @@ export const NavItem = styled.li`
     &:hover {
       border: none;
     }
-  }
-`;
-
-export const NavItemBtn = styled.section`
-  display: flex;
-  justify-content: center;
-  @media screen and (max-width: 960px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 120px;
   }
 `;
 
@@ -151,40 +146,45 @@ export const NavBtnLink = styled(Link)`
 export const SocialMedia = styled.div`
   max-width: 200px;
   width: 100%;
+  @media screen and (max-width: 820px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 export const SocialMediaWrap = styled.div`
   display: flex;
   align-items: center;
-  width: 40%;
-  margin-top: 30px;
-  margin-left: 3rem;
+  width: 30%;
+  margin-top: 20px;
+  margin-left: 1rem;
   @media screen and (max-width: 820px) {
     flex-direction: column;
     display: block;
-    position: absolute;
     top: 0;
-    margin-top: 50px;
+    margin-top: 40px;
     margin-left: auto;
-    margin-left: auto;
+    margin-right: auto;
   }
 `;
 
 export const SocialIcons = styled.div`
   display: flex;
   align-items: center;
-  width: 240px;
+  width: 250px;
 `;
 
 export const SocialIconLink = styled.a`
   color: black;
-  font-size: 24px;
-  margin-left: 1rem;
+  font-size: 40px;
+  margin-left: 0.5rem;
+  @media screen and (max-width: 960px) {
+    font-size: 30px;
+  }
 `;
 
 export const Button = styled.button`
   background: lightgray;
-  white-space: nowrap;
   padding: ${({ big }) => (big ? "12px 64px" : "10px 20px")};
   color: #082c64;
   font-size: 24px;
@@ -200,5 +200,24 @@ export const Button = styled.button`
 
   @media screen and (max-width: 960px) {
     width: 100%;
+    padding: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 20px;
+  }
+`;
+
+export const NavItemBtn = styled.section`
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  @media screen and (max-width: 960px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    top: 30px;
+    left: 10px;
+    position: absolute;
   }
 `;

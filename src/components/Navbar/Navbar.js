@@ -46,6 +46,7 @@ function Navbar() {
     setSelectedLang(lang);
     i18n.changeLanguage(lang);
     document.body.dir = i18n.dir();
+    if (button) console.log(button);
   };
 
   return (
@@ -60,6 +61,21 @@ function Navbar() {
               {click ? <FaTimes /> : <FaBars />}
             </MobileIcon>
             <NavMenu onClick={handleClick} click={click}>
+              {!button ? (
+                <>
+                  {selectedLang === "ar" ? (
+                    <Button onClick={() => changeLanguage("en")}>
+                      English
+                    </Button>
+                  ) : (
+                    <Button onClick={() => changeLanguage("en")}>
+                      العربية
+                    </Button>
+                  )}
+                </>
+              ) : (
+                <></>
+              )}
               <NavItem>
                 <NavLinks to="/" onClick={closeMobileMenu}>
                   {t("Home")}
@@ -102,6 +118,31 @@ function Navbar() {
                 </DropDownContent>
           </DropDownLi>*/}
             </NavMenu>
+            <NavItemBtn>
+              {button ? (
+                <>
+                  {selectedLang === "ar" ? (
+                    <Button fontBig={true} onClick={() => changeLanguage("en")}>
+                      English
+                    </Button>
+                  ) : (
+                    <Button onClick={() => changeLanguage("ar")}>
+                      العربية
+                    </Button>
+                  )}
+                </>
+              ) : (
+                <>
+                  {selectedLang === "ar" ? (
+                    <Button fontBig={true} onClick={() => changeLanguage("en")}>
+                      En
+                    </Button>
+                  ) : (
+                    <Button onClick={() => changeLanguage("ar")}>Ar</Button>
+                  )}
+                </>
+              )}
+            </NavItemBtn>
             <SocialMedia>
               <SocialMediaWrap>
                 <SocialIcons>
@@ -122,15 +163,6 @@ function Navbar() {
                 </SocialIcons>
               </SocialMediaWrap>
             </SocialMedia>
-            <NavItemBtn>
-              {selectedLang === "ar" && button ? (
-                <Button fontBig={true} onClick={() => changeLanguage("en")}>
-                  English
-                </Button>
-              ) : (
-                <Button onClick={() => changeLanguage("ar")}>العربية</Button>
-              )}
-            </NavItemBtn>
           </NavbarContainer>
         </Nav>
       </IconContext.Provider>

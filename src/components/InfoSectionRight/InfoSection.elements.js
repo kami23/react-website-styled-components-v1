@@ -11,6 +11,12 @@ export const InfoRow = styled.div`
   flex-wrap: wrap;
   align-items: center;
   flex-direction: ${({ imgStart }) => (imgStart ? "row-reverse" : "row")};
+  @media screen and (max-width: 920px) {
+    padding-bottom: 20px;
+  }
+  @media screen and (max-width: 1800px) {
+    padding-bottom: 30px;
+  }
 `;
 
 export const InfoColumn = styled.div`
@@ -26,6 +32,8 @@ export const InfoColumn = styled.div`
     flex-basis: 100%;
     display: flex;
     justify-content: center;
+    display: flex;
+    align-items: center;
   }
 `;
 
@@ -33,8 +41,13 @@ export const TextWrapper = styled.div`
   max-width: 540px;
   padding-top: 0;
   padding-bottom: 70px;
+  justify-content: center;
+  display: flex;
   @media screen and (max-width: 768px) {
     padding-bottom: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -68,6 +81,9 @@ export const Heading = styled.h1`
   line-height: 1.1;
   font-weight: 600;
   color: ${({ lightText }) => (lightText ? "#f7f8fa" : "#1c2237")};
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Subtitle = styled.p`
@@ -76,4 +92,10 @@ export const Subtitle = styled.p`
   font-size: 18px;
   line-height: 24px;
   color: ${({ lightTextDesc }) => (lightTextDesc ? "#a9b3c1" : "#1c2237")};
+
+  @media screen and (max-width: 920px) {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
 `;

@@ -128,7 +128,6 @@ export const SocialMediaWrap = styled.div`
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-
   @media screen and (max-width: 820px) {
     flex-direction: column;
   }
@@ -156,12 +155,13 @@ export const WebsiteRights = styled.small`
 
 export const SocialIcons = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 240px;
 `;
 
 export const SocialIconLink = styled.a`
   color: #fff;
-  font-size: 24px;
+  font-size: 40px;
+  margin-left: 20px;
 `;

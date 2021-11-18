@@ -10,7 +10,6 @@ import { Navbar, Footer } from "./components";
 import styled from "styled-components";
 import img from "./images/background.jpg";
 import Vision from "./pages/VisionPage/Vision";
-import Biography from "./pages/Biography/Biography";
 const MainContainer = styled.div``;
 function App() {
   return (
@@ -21,7 +20,6 @@ function App() {
         <Navbar />
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/biography" exact component={Biography} />
           <Route path="/vision" exact component={Vision} />
           <Route path="/services" component={Services} />
           <Route path="/products" component={Products} />

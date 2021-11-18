@@ -31,7 +31,7 @@ export const InfoColumn = styled.div`
 `;
 
 export const TextWrapper = styled.div`
-  max-width: 540px;
+  max-width: 1000px;
   padding-top: 0;
   padding-bottom: 70px;
   @media screen and (max-width: 768px) {
@@ -72,9 +72,9 @@ export const Heading = styled.h1`
 `;
 
 export const Subtitle = styled.p`
-  max-width: 440px;
+  max-width: 540px;
   margin-bottom: 35px;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 24px;
-  color: ${({ lightTextDesc }) => (lightTextDesc ? "#a9b3c1" : "#1c2237")};
+  color: #f7f8fa;
 `;

@@ -11,6 +11,9 @@ import {
 import { IconContext } from "react-icons/lib";
 import { Button } from "../../globalStyles";
 import styled from "styled-components";
+import i18n from "i18next";
+import { useTranslation } from "react-i18next";
+
 import {
   Nav,
   NavbarContainer,
@@ -83,13 +86,17 @@ function Navbar() {
   }, []);
 
   window.addEventListener("resize", showButton);
-
+  const { t } = useTranslation();
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+    i18n.dir();
+  };
   return (
     <>
       <IconContext.Provider value={{ color: "#082c64" }}>
         <Nav>
           <NavLogo>
-            <NameSite onClick={closeMobileMenu}>Issam NECHMA</NameSite>
+            <NameSite onClick={closeMobileMenu}> {t("Issam NECHMA")}</NameSite>
           </NavLogo>
           <NavbarContainer>
             <MobileIcon onClick={handleClick}>
@@ -98,32 +105,32 @@ function Navbar() {
             <NavMenu onClick={handleClick} click={click}>
               <NavItem>
                 <NavLinks to="/" onClick={closeMobileMenu}>
-                  Accueil
+                  {t("Home")}
                 </NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks to="/biography" onClick={closeMobileMenu}>
-                  Biographie
+                  {t("Biography")}
                 </NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks to="/vision" onClick={closeMobileMenu}>
-                  Vision
+                  {t("Vision")}
                 </NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks to="/products" onClick={closeMobileMenu}>
-                  Valeurs
+                  {t("Values")}
                 </NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks to="/products" onClick={closeMobileMenu}>
-                  Activités
+                  {t("Activities")}
                 </NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks to="/products" onClick={closeMobileMenu}>
-                  Intervention
+                  {t("Intervision")}
                 </NavLinks>
               </NavItem>
               <DropDownLi>
@@ -152,7 +159,7 @@ function Navbar() {
                     <FaTwitter />
                   </SocialIconLink>
                   <SocialIconLink
-                    href="/"
+                    href="https://www.linkedin.com/in/issamnechma/?originalSubdomain=dz"
                     target="_blank"
                     aria-label="LinkedIn"
                   >
@@ -161,6 +168,21 @@ function Navbar() {
                 </SocialIcons>
               </SocialMediaWrap>
             </SocialMedia>
+
+            <NavItemBtn>
+              {button ? (
+                <>
+                  <Button onClick={() => changeLanguage("en")}>English</Button>
+                  <Button onClick={() => changeLanguage("ar")}>Arabic</Button>
+                </>
+              ) : (
+                <NavBtnLink to="/sign-up">
+                  <Button onClick={closeMobileMenu} fontBig primary>
+                    SIGN UP
+                  </Button>
+                </NavBtnLink>
+              )}
+            </NavItemBtn>
           </NavbarContainer>
         </Nav>
       </IconContext.Provider>

@@ -12,6 +12,7 @@ import {
   ImgWrapper,
   Img,
 } from "./InfoSection.elements";
+import { useTranslation } from "react-i18next";
 
 function InfoSectionRight({
   primary,
@@ -31,6 +32,7 @@ function InfoSectionRight({
   imgStart,
   start,
 }) {
+  const { t } = useTranslation();
   return (
     <>
       <InfoSec lightBg={lightBg}>
@@ -44,7 +46,7 @@ function InfoSectionRight({
 
             <InfoColumn>
               <TextWrapper>
-                <Heading lightText={lightText}>{headline}</Heading>
+                <Heading lightText={lightText}>{t("Slogan")}</Heading>
                 <Subtitle>{description01}</Subtitle>
                 <Subtitle>{description02}</Subtitle>
                 <Subtitle>{description03}</Subtitle>

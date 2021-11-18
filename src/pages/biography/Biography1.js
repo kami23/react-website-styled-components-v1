@@ -4,6 +4,7 @@ import { InfoSection } from "../../components";
 import InfoSectionRight from "../../components/InfoSectionRight/InfoSectionRight.js";
 import styled from "styled-components";
 import img from "../../images/background.jpg";
+import BioSection from "../../components/Biography/bioSection.js";
 
 const MainContainer = styled.div`
   display: flex;
@@ -81,7 +82,7 @@ export const Heading = styled.h1`
 export default function Biography() {
   return (
     <>
-      <InfoSectionRight {...biography} />
+      <BioSection {...biography} />
     </>
   );
 }

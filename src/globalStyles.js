@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
 export const Container = styled.div`
   z-index: 1;
   width: 100%;
-  max-width: 1300px;
+  max-width: 1700px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 50px;
@@ -26,11 +26,11 @@ export const Container = styled.div`
 
 export const Button = styled.button`
   border-radius: 4px;
-  background: ${({ primary }) => (primary ? 'lightgray' : '#0467FB')};
+  background: ${({ primary }) => (primary ? "lightgray" : "#0467FB")};
   white-space: nowrap;
-  padding: ${({ big }) => (big ? '12px 64px' : '10px 20px')};
+  padding: ${({ big }) => (big ? "12px 64px" : "10px 20px")};
   color: #fff;
-  font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
+  font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
   outline: none;
   border: none;
   cursor: pointer;
@@ -38,7 +38,7 @@ export const Button = styled.button`
   &:hover {
     transition: all 0.3s ease-out;
     background: #fff;
-    background-color: ${({ primary }) => (primary ? '#0467FB' : '#4B59F7')};
+    background-color: ${({ primary }) => (primary ? "#0467FB" : "#4B59F7")};
   }
 
   @media screen and (max-width: 960px) {

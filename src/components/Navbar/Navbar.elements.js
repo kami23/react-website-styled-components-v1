@@ -88,7 +88,7 @@ export const NavMenu = styled.ul`
     opacity: 1;
     transition: all 0.5s ease;
     background: white;
-    font-size: 28px;
+    font-size: 18px;
   }
 `;
 

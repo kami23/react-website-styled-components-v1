@@ -43,10 +43,10 @@ function Navbar() {
   window.addEventListener("resize", showButton);
   const { t } = useTranslation();
   const changeLanguage = (lang) => {
+    console.log(button);
     setSelectedLang(lang);
     i18n.changeLanguage(lang);
     document.body.dir = i18n.dir();
-    if (button) console.log(button);
   };
 
   return (
@@ -137,31 +137,21 @@ function Navbar() {
                   >
                     <FaLinkedin />
                   </SocialIconLink>
-                  <SocialIconLink>
-                    <NavItemBtn>
-                      {!button ? (
-                        <>
-                          {" "}
-                          {selectedLang === "ar" ? (
-                            <Button
-                              fontBig={true}
-                              onClick={() => changeLanguage("en")}
-                            >
-                              En
-                            </Button>
-                          ) : (
-                            <Button onClick={() => changeLanguage("ar")}>
-                              Ar
-                            </Button>
-                          )}
-                        </>
-                      ) : (
-                        <></>
-                      )}
-                    </NavItemBtn>
-                  </SocialIconLink>
                 </SocialIcons>
               </SocialMediaWrap>
+              <NavItemBtn>
+                {button === false ? (
+                  <>
+                    {selectedLang === "ar" ? (
+                      <Button onClick={() => changeLanguage("en")}>En</Button>
+                    ) : (
+                      <Button onClick={() => changeLanguage("ar")}>Ar</Button>
+                    )}
+                  </>
+                ) : (
+                  <></>
+                )}
+              </NavItemBtn>
             </SocialMedia>
           </NavbarContainer>
         </Nav>

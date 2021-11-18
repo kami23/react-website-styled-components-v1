@@ -1,5 +1,18 @@
 import styled from "styled-components";
+export const MainContainer = styled.div`
+  z-index: 1;
+  width: 100%;
+  max-width: 1700px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 50px;
+  padding-left: 50px;
 
+  @media screen and (max-width: 991px) {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+`;
 export const InfoSec = styled.div`
   color: #fff;
   background: ${({ lightBg }) => (lightBg ? "#fff" : "#082c64")};
@@ -7,15 +20,12 @@ export const InfoSec = styled.div`
 
 export const InfoRow = styled.div`
   display: flex;
-  margin: 0 -15px -15px -15px;
+  margin: 0;
   flex-wrap: wrap;
   align-items: center;
   flex-direction: ${({ imgStart }) => (imgStart ? "row-reverse" : "row")};
   @media screen and (max-width: 920px) {
     padding-bottom: 20px;
-  }
-  @media screen and (max-width: 1800px) {
-    padding-bottom: 30px;
   }
 `;
 

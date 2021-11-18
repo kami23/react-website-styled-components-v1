@@ -1,5 +1,4 @@
 import React from "react";
-import { Container } from "../../globalStyles";
 import {
   InfoSec,
   InfoRow,
@@ -9,6 +8,7 @@ import {
   Subtitle,
   ImgWrapper,
   Img,
+  MainContainer,
 } from "./InfoSection.elements";
 import { useTranslation } from "react-i18next";
 
@@ -34,7 +34,7 @@ function InfoSectionRight({
   return (
     <>
       <InfoSec lightBg={lightBg}>
-        <Container>
+        <MainContainer>
           <InfoRow imgStart={imgStart}>
             <InfoColumn>
               <ImgWrapper start={start}>
@@ -51,7 +51,7 @@ function InfoSectionRight({
               </TextWrapper>
             </InfoColumn>
           </InfoRow>
-        </Container>
+        </MainContainer>
       </InfoSec>
     </>
   );

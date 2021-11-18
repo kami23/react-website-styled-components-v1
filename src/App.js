@@ -10,7 +10,7 @@ import { Navbar, Footer } from "./components";
 import styled from "styled-components";
 import img from "./images/background.jpg";
 import Vision from "./pages/VisionPage/Vision";
-import Biography from "./pages/Biography/Biography1";
+import Biography from "./pages/Biography/Biography";
 const MainContainer = styled.div``;
 function App() {
   return (

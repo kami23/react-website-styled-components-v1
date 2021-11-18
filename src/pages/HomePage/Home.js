@@ -2,7 +2,7 @@ import React from "react";
 import { homeObjOne, homeObjTwo, homeObjThree, homeObjFour } from "./Data";
 import { InfoSection, Pricing } from "../../components";
 import InfoSectionRight from "../../components/InfoSectionRight/InfoSectionRight";
-import Biography from "../Biography/Biography1";
+import Biography from "../Biography/Biography";
 function Home() {
   return (
     <>

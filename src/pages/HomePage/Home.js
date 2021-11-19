@@ -6,6 +6,7 @@ function Home() {
   return (
     <>
       <InfoSectionRight {...homeObjOne} />
+      <Bio />
       {/*   <InfoSection {...homeObjThree} />
       <InfoSection {...homeObjTwo} />
       <Pricing />

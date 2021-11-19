@@ -11,7 +11,7 @@ export const homeObjOne = {
   buttonLabel: "Get Started",
   imgStart: "",
   button: false,
-  img: require("../../images/PhotoAccueil.png"),
+  img: require("../../images/HomePage.png"),
   alt: "Credit Card",
   start: false,
 };

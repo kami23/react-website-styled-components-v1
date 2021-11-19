@@ -13,6 +13,19 @@ export const InfoRow = styled.div`
   flex-direction: ${({ imgStart }) => (imgStart ? "row-reverse" : "row")};
 `;
 
+export const InfoColumnPic = styled.div`
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 50%;
+  flex-basis: 50%;
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+  }
+`;
+
 export const InfoColumn = styled.div`
   margin-bottom: 15px;
   padding-right: 15px;
@@ -33,6 +46,7 @@ export const TextWrapper = styled.div`
   max-width: 1000px;
   padding-top: 0;
   padding-bottom: 70px;
+  line-height: 1cm;
   @media screen and (max-width: 768px) {
     padding-bottom: 65px;
   }
@@ -41,7 +55,7 @@ export const TextWrapper = styled.div`
 export const ImgWrapper = styled.div`
   max-width: 1255px;
   display: flex;
-  justify-content: ${({ start }) => (start ? "flex-start" : "flex-end")};
+  justify-content: "flex-start";
 `;
 
 export const TopLine = styled.div`
@@ -77,3 +91,11 @@ export const Subtitle = styled.p`
   line-height: 24px;
   color: #f7f8fa;
 `;
+
+export const Devider = styled.div`
+border-top: 0.5px solid #ffffff;
+height: 2px;
+width: 80%;
+display: block;
+margin-bottom: 35px;
+`

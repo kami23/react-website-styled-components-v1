@@ -25,7 +25,7 @@ function Footer() {
       <SocialMedia>
         <SocialMediaWrap>
           <SocialIcons>
-            <SocialIconLink href="/" target="_blank" aria-label="Facebook">
+            <SocialIconLink href="https://www.facebook.com/Nechma-Issam-%D9%86%D8%B4%D9%85%D8%A9-%D8%B9%D8%B5%D8%A7%D9%85-112595131236918?_rdc=2&_rdr" target="_blank" aria-label="Facebook">
               <FaFacebook />
             </SocialIconLink>
             <SocialIconLink href="/" target="_blank" aria-label="LinkedIn">

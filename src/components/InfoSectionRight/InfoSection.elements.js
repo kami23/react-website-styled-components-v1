@@ -21,17 +21,13 @@ export const InfoRow = styled.div`
   align-items: center;
   flex-direction: ${({ imgStart }) => (imgStart ? "row-reverse" : "row")};
   @media screen and (max-width: 920px) {
-    padding-bottom: 20px;
   }
 `;
 
 export const InfoColumn = styled.div`
-  margin-bottom: 15px;
   padding: 0;
   flex: 1;
-  max-width: 50%;
-  flex-basis: 50%;
-
+  flex-basis: 30%;
   @media screen and (max-width: 768px) {
     max-width: 100%;
     flex-basis: 100%;
@@ -43,7 +39,7 @@ export const InfoColumn = styled.div`
 `;
 
 export const TextWrapper = styled.div`
-  max-width: 540px;
+  max-width: 340px;
   padding-top: 0;
   padding-bottom: 70px;
   justify-content: center;
@@ -57,8 +53,8 @@ export const TextWrapper = styled.div`
 `;
 
 export const ImgWrapper = styled.div`
-  max-width: 1055px;
-  width: 100%;
+  width: 780px;
+  height: 680px;
   display: flex;
   justify-content: ${({ start }) => (start ? "flex-start" : "flex-end")};
   @media screen and (max-width: 920px) {
